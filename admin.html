@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Istatistik Guncem | Admin Panel</title>
+    <meta name="description" content="Istatistik Guncem admin paneli ve yazi yonetimi." />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#mainContent">Icerige gec</a>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Yonetim gezinmesi">
+        <h1 class="logo">Admin Panel</h1>
+        <button id="logoutBtn" class="theme-toggle" type="button">Cikis Yap</button>
+      </nav>
+    </header>
+
+    <main id="mainContent" class="container">
+      <section class="reveal">
+        <h2>Yeni Yazi Paylas</h2>
+        <form id="postForm" class="contact-form">
+          <label for="postTitle">Baslik</label>
+          <input id="postTitle" name="title" type="text" required />
+
+          <label for="postCategory">Kategori</label>
+          <input id="postCategory" name="category" type="text" required />
+
+          <label for="postContent">Icerik</label>
+          <textarea id="postContent" name="content" rows="8" required></textarea>
+
+          <label for="postImageUrl">Yazi Gorseli (URL)</label>
+          <input
+            id="postImageUrl"
+            name="image_url"
+            type="url"
+            placeholder="https://... veya /assets/..."
+          />
+          <div class="post-actions">
+            <input id="postImageFile" name="post_image_file" type="file" accept="image/*" />
+            <button id="uploadPostImageBtn" class="icon-btn" type="button">Gorsel Yukle</button>
+          </div>
+          <img
+            id="postImagePreview"
+            class="card-image admin-image-preview hidden-card"
+            src=""
+            alt="Yazi gorsel onizleme"
+            loading="lazy"
+            decoding="async"
+          />
+
+          <label>
+            <input id="postPublished" name="published" type="checkbox" />
+            Hemen yayinla
+          </label>
+
+          <div class="post-actions">
+            <button class="btn" id="savePostBtn" type="submit">Yaziyi Kaydet</button>
+            <button id="cancelPostEditBtn" class="icon-btn hidden-card" type="button">Duzenlemeyi Iptal Et</button>
+          </div>
+          <p class="form-message" id="postMessage" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="reveal">
+        <h3>Yuklenen Yazilar</h3>
+        <div id="adminPostsList" class="projects-grid"></div>
+      </section>
+
+      <section class="reveal">
+        <h3>Site Icerik Ayarlari</h3>
+        <p class="minimalist-meta">Ana sayfa ve Hakkimda bolumundeki sabit metinleri buradan guncelleyebilirsin.</p>
+        <form id="siteSettingsForm" class="contact-form">
+          <label for="settingIndexIntroText">Ana Sayfa Giris Metni</label>
+          <textarea id="settingIndexIntroText" name="index_intro_text" rows="3"></textarea>
+
+          <label for="settingIndexSidebarAbout">Ana Sayfa Sidebar Hakkimda Metni</label>
+          <textarea id="settingIndexSidebarAbout" name="index_sidebar_about" rows="3"></textarea>
+
+          <label for="settingIndexNewsletterText">Ana Sayfa Bulten Metni</label>
+          <textarea id="settingIndexNewsletterText" name="index_newsletter_text" rows="3"></textarea>
+
+          <label for="settingAboutTitle">Hakkimda Baslik</label>
+          <input id="settingAboutTitle" name="about_profile_title" type="text" />
+
+          <label for="settingAboutText">Hakkimda Aciklama Metni</label>
+          <textarea id="settingAboutText" name="about_profile_text" rows="4"></textarea>
+
+          <label for="settingProjectsHeroText">Projeler Hero Aciklama Metni</label>
+          <textarea id="settingProjectsHeroText" name="projects_hero_text" rows="3"></textarea>
+
+          <label for="settingProjectsCardsJson">Proje Kartlari JSON (3 kart)</label>
+          <textarea
+            id="settingProjectsCardsJson"
+            name="projects_cards_json"
+            rows="10"
+            placeholder='[{"title":"...","category":"web","status":"Aktif","description":"...","tech":["HTML"],"progress":85,"problem":"...","solution":"...","result":"...","metrics":["..."]}]'
+          ></textarea>
+
+          <button class="btn" type="submit">Ayarlari Kaydet</button>
+          <p class="form-message" id="siteSettingsMessage" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="reveal">
+        <h3>Yorum Moderasyonu</h3>
+        <p class="minimalist-meta">Yeni yorumlar once onaya duser. Buradan onaylayabilir veya reddedebilirsin.</p>
+        <div class="filter-row" id="adminCommentFilterRow">
+          <button class="filter-btn active" data-comment-filter="pending" type="button">Bekleyen</button>
+          <button class="filter-btn" data-comment-filter="approved" type="button">Onayli</button>
+          <button class="filter-btn" data-comment-filter="rejected" type="button">Reddedilen</button>
+          <button class="filter-btn" data-comment-filter="all" type="button">Tum Yorumlar</button>
+        </div>
+        <div class="search-wrap">
+          <input
+            id="adminCommentSearch"
+            class="search-input"
+            type="search"
+            placeholder="Kullanici, yazi basligi veya yorum metninde ara..."
+          />
+        </div>
+        <div class="post-actions">
+          <button id="approveAllVisibleBtn" class="icon-btn" type="button">Gorunen Tumunu Onayla</button>
+          <button id="rejectAllVisibleBtn" class="icon-btn" type="button">Gorunen Tumunu Reddet</button>
+          <button id="bulkApproveVisibleBtn" class="icon-btn" type="button">Gorunenleri Toplu Onayla</button>
+          <button id="bulkRejectVisibleBtn" class="icon-btn" type="button">Gorunenleri Toplu Reddet</button>
+        </div>
+        <div id="adminCommentsList" class="projects-grid"></div>
+        <div class="post-actions">
+          <button id="adminCommentsPrevPageBtn" class="icon-btn" type="button">Onceki</button>
+          <p id="adminCommentsPageInfo" class="minimalist-meta">Sayfa 1 / 1</p>
+          <button id="adminCommentsNextPageBtn" class="icon-btn" type="button">Sonraki</button>
+        </div>
+      </section>
+    </main>
+    <div id="adminToast" class="admin-toast" role="status" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

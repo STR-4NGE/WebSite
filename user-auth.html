@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Istatistik Guncem | Kullanici Hesabi</title>
+    <meta
+      name="description"
+      content="Kullanici kayit, giris, sifre degistirme ve sifre sifirlama adimlarini yonetin."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#mainContent">Icerige gec</a>
+    <main id="mainContent" class="container auth-page">
+      <section class="about-card reveal auth-shell auth-centered auth-compact">
+        <p class="badge">Istatistik Guncem</p>
+        <h2>Kullanici Girisi</h2>
+        <p class="minimalist-meta">Sade hesap alani: kayit ve giris tek ekranda.</p>
+        <div class="projects-grid auth-main-grid">
+          <form id="userRegisterForm" class="contact-form auth-form-card">
+            <h3>Kayit Ol</h3>
+            <input name="username" type="text" placeholder="Kullanici adi" required />
+            <input name="email" type="email" placeholder="E-posta" required />
+            <input name="password" type="password" placeholder="Sifre" required />
+            <button class="btn" type="submit">Kayit Ol</button>
+            <p id="registerMessage" class="form-message" role="status" aria-live="polite"></p>
+          </form>
+
+          <form id="userLoginForm" class="contact-form auth-form-card">
+            <h3>Giris Yap</h3>
+            <input name="username" type="text" placeholder="Kullanici adi" required />
+            <input name="password" type="password" placeholder="Sifre" required />
+            <button class="btn" type="submit">Giris Yap</button>
+            <p id="userLoginMessage" class="form-message" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+        <div class="auth-links">
+          <button id="openForgotFlow" class="theme-toggle" type="button">Sifremi Unuttum</button>
+          <button id="backToAuth" class="theme-toggle hidden-card" type="button">Girise Don</button>
+          <a class="theme-toggle" href="login.html">Admin Girisi</a>
+          <a class="theme-toggle" href="index.html">Ana Sayfa</a>
+        </div>
+      </section>
+
+      <section id="forgotFlowPanels" class="reveal auth-shell hidden-card auth-centered">
+        <h3>Sifre Kurtarma Adimlari</h3>
+        <p class="empty-state">
+          Bu alan sadece sifre unutma sureci icin acilir.
+        </p>
+        <form id="verifyEmailForm" class="contact-form auth-form-card">
+          <h4>E-posta Dogrulama</h4>
+          <input name="token" type="text" placeholder="Dogrulama tokeni" required />
+          <button class="btn" type="submit">E-postayi Dogrula</button>
+          <p id="verifyMessage" class="form-message" role="status" aria-live="polite"></p>
+        </form>
+
+        <form id="forgotPasswordForm" class="contact-form auth-form-card">
+          <h4>Token Olustur</h4>
+          <input name="email" type="email" placeholder="Kayitli e-posta" required />
+          <button class="btn" type="submit">Sifirlama Tokeni Olustur</button>
+          <p id="forgotMessage" class="form-message" role="status" aria-live="polite"></p>
+        </form>
+
+        <form id="resetPasswordForm" class="contact-form auth-form-card">
+          <h4>Sifreyi Yenile</h4>
+          <input name="token" type="text" placeholder="Sifirlama tokeni" required />
+          <input name="newPassword" type="password" placeholder="Yeni sifre" required />
+          <button class="btn" type="submit">Sifreyi Sifirla</button>
+          <p id="resetMessage" class="form-message" role="status" aria-live="polite"></p>
+        </form>
+
+        <form id="changePasswordForm" class="contact-form auth-form-card">
+          <h4>Giris Yaptiysan Sifre Guncelle</h4>
+          <input name="currentPassword" type="password" placeholder="Mevcut sifre" required />
+          <input name="newPassword" type="password" placeholder="Yeni sifre" required />
+          <button class="btn" type="submit">Sifreyi Guncelle</button>
+          <p id="changePasswordMessage" class="form-message" role="status" aria-live="polite"></p>
+        </form>
+        <button id="userLogoutBtn" class="theme-toggle" type="button">Kullanici Cikisi</button>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

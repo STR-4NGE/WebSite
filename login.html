@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Istatistik Guncem | Admin Giris</title>
+    <meta name="description" content="Istatistik Guncem yonetici giris sayfasi." />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="auth-page">
+    <a class="skip-link" href="#mainContent">Icerige gec</a>
+    <main id="mainContent" class="container auth-page">
+      <section class="about-card reveal auth-shell auth-centered auth-compact">
+        <p class="badge">Yonetim Erisimi</p>
+        <h2>Admin Girisi</h2>
+        <p class="minimalist-meta">Eski Facebook tarzi sade giris: hizli, net ve odakli.</p>
+        <form id="loginForm" class="contact-form">
+          <label for="username">Kullanici Adi</label>
+          <input id="username" name="username" type="text" required />
+
+          <label for="password">Sifre</label>
+          <input id="password" name="password" type="password" required />
+
+          <button class="btn" type="submit">Giris Yap</button>
+          <p class="form-message" id="loginMessage" role="status" aria-live="polite"></p>
+        </form>
+        <div class="auth-links">
+          <a class="theme-toggle" href="user-auth.html">Kullanici Girisi</a>
+          <a class="theme-toggle" href="index.html">Ana Sayfa</a>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

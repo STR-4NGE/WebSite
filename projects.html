@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Istatistik Guncem | Projeler</title>
+    <meta
+      name="description"
+      content="Web, veri ve otomasyon kategorilerindeki projelerimi teknoloji stack ve ilerleme durumlariyla inceleyin."
+    />
+    <meta property="og:title" content="Istatistik Guncem | Projeler" />
+    <meta
+      property="og:description"
+      content="Gelistirdigim projeler, kullanilan teknolojiler ve tamamlanma durumlari."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Nunito:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#mainContent">Icerige gec</a>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Ana gezinme">
+        <h1 class="logo">Istatistik Guncem</h1>
+        <ul class="nav-links">
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="about.html">Hakkimda</a></li>
+          <li><a href="projects.html" class="active">Projeler</a></li>
+          <li><a href="user-auth.html">Giris</a></li>
+          <li><a href="login.html">Panel</a></li>
+        </ul>
+        <button id="themeToggle" class="theme-toggle" type="button">Karanlik Mod</button>
+      </nav>
+    </header>
+
+    <main id="mainContent" class="container">
+      <section class="hero reveal">
+        <p class="badge">Uygulamali Calismalar</p>
+        <h2>Gelistirdigim Projeler</h2>
+        <p class="terminal-meta">&gt; dashboard.projects | filters: category+search+sort | monitor: enabled</p>
+        <img
+          class="hero-image"
+          src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&w=1200&q=80"
+          alt="Veri analizi grafik ekrani"
+          width="1200"
+          height="675"
+          fetchpriority="high"
+          decoding="async"
+        />
+        <p id="projectsHeroText">
+          Bu sayfada okul ve bireysel calismalarimdan secili projeler yer aliyor.
+          Her proje icin teknoloji, durum ve gelisim seviyesi bilgisi bulunuyor.
+        </p>
+      </section>
+
+      <section class="featured-project reveal" aria-labelledby="featuredProjectHeading">
+        <h3 id="featuredProjectHeading">One Cikan Proje</h3>
+        <article class="post-card" id="featuredProjectCard">
+          <p class="post-tag" id="featuredProjectCategory">Kategori</p>
+          <h4 id="featuredProjectTitle">Proje yukleniyor...</h4>
+          <p class="minimalist-meta" id="featuredProjectMeta"></p>
+          <div class="progress">
+            <div class="progress-bar" id="featuredProjectProgress" data-progress="0"></div>
+          </div>
+          <p id="featuredProjectExcerpt" class="minimalist-meta"></p>
+        </article>
+      </section>
+
+      <section class="stats reveal">
+        <div class="stat-box">
+          <span class="count" data-target="8">0</span>
+          <p>Toplam Proje</p>
+          <div class="mini-sparkline" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="stat-box">
+          <span class="count" data-target="5">0</span>
+          <p>Aktif Proje</p>
+          <div class="mini-sparkline" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="stat-box">
+          <span class="count" data-target="3">0</span>
+          <p>Tamamlanan Proje</p>
+          <div class="mini-sparkline" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+      </section>
+
+      <section class="reveal">
+        <h3>Proje Filtreleri</h3>
+        <div class="search-wrap">
+          <input
+            id="projectSearch"
+            class="search-input"
+            type="search"
+            placeholder="Proje adi veya teknoloji ara..."
+          />
+        </div>
+        <div class="search-wrap">
+          <select id="projectSort" class="search-input">
+            <option value="default">Siralama: Varsayilan</option>
+            <option value="az">Siralama: A-Z</option>
+            <option value="progress-desc">Siralama: Tamamlanma Yuksekten</option>
+            <option value="progress-asc">Siralama: Tamamlanma Dusukten</option>
+          </select>
+        </div>
+        <div class="filter-row" id="projectFilterRow">
+          <button class="filter-btn active" data-project-filter="all" type="button">Tum Projeler</button>
+          <button class="filter-btn" data-project-filter="web" type="button">Web</button>
+          <button class="filter-btn" data-project-filter="veri" type="button">Veri</button>
+          <button class="filter-btn" data-project-filter="otomasyon" type="button">Otomasyon</button>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card" data-project-category="web" data-project-slot="1">
+            <div class="project-top">
+              <span class="post-tag">Web</span>
+              <strong>Durum: Aktif</strong>
+            </div>
+            <h4>Kisisel Blog Sitesi</h4>
+            <img
+              class="card-image"
+              src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
+              alt="Web proje"
+              width="900"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            />
+            <p>HTML, CSS ve JavaScript kullanarak gelistirdigim responsive blog arayuzu.</p>
+            <div class="project-case">
+              <p class="minimalist-meta"><strong>Problem:</strong> Blog vitrinini okunabilir ve hizli hale getirmek.</p>
+              <p class="minimalist-meta"><strong>Cozum:</strong> Minimal tasarim + dinamik post listeleme.</p>
+              <p class="minimalist-meta"><strong>Sonuc:</strong> Mobil uyumlu, etkileşimli ve duzenli bir deneyim.</p>
+            </div>
+            <div class="project-tech">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+            <div class="metric-chips">
+              <span class="metric-chip">UI Score: 90</span>
+              <span class="metric-chip">Release: v1.3</span>
+              <span class="metric-chip">Sprint: 2 hafta</span>
+            </div>
+            <div class="progress">
+              <div class="progress-bar" data-progress="85"></div>
+            </div>
+          </article>
+
+          <article class="project-card" data-project-category="veri" data-project-slot="2">
+            <div class="project-top">
+              <span class="post-tag">Veri</span>
+              <strong>Durum: Tamamlandi</strong>
+            </div>
+            <h4>BIST100 Finansal Analiz</h4>
+            <img
+              class="card-image"
+              src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80"
+              alt="Finansal analiz"
+              width="900"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            />
+            <p>Hisse senedi verileri icin otomatik raporlama ve temel analiz paneli.</p>
+            <div class="project-case">
+              <p class="minimalist-meta"><strong>Problem:</strong> Finansal verileri manuel analiz etmek icin zaman kaybi.</p>
+              <p class="minimalist-meta"><strong>Cozum:</strong> Otomatik raporlama + temel gostergelerle analiz.</p>
+              <p class="minimalist-meta"><strong>Sonuc:</strong> Karar surecini kisaltilmis ve daha net gorunum saglanmis panel.</p>
+            </div>
+            <div class="project-tech">
+              <span>Python</span><span>Pandas</span><span>Matplotlib</span>
+            </div>
+            <div class="metric-chips">
+              <span class="metric-chip">Accuracy: %92</span>
+              <span class="metric-chip">Data Scope: 5y</span>
+              <span class="metric-chip">Report Time: -%40</span>
+            </div>
+            <div class="progress">
+              <div class="progress-bar" data-progress="100"></div>
+            </div>
+          </article>
+
+          <article class="project-card" data-project-category="otomasyon" data-project-slot="3">
+            <div class="project-top">
+              <span class="post-tag">Otomasyon</span>
+              <strong>Durum: Gelistiriliyor</strong>
+            </div>
+            <h4>Ders Planlayici Arac</h4>
+            <img
+              class="card-image"
+              src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=900&q=80"
+              alt="Planlama araci"
+              width="900"
+              height="600"
+              loading="lazy"
+              decoding="async"
+            />
+            <p>Haftalik gorev planlarini duzenleyip onceliklendiren basit otomasyon araci.</p>
+            <div class="project-case">
+              <p class="minimalist-meta"><strong>Problem:</strong> Haftalik gorevlerin daginik kalmasi ve onceliklerin belirsizligi.</p>
+              <p class="minimalist-meta"><strong>Cozum:</strong> Basit UI + JSON ile planlama ve takip akisi.</p>
+              <p class="minimalist-meta"><strong>Sonuc:</strong> Daha duzenli ilerleme ve gorevlerin net takibi.</p>
+            </div>
+            <div class="project-tech">
+              <span>JavaScript</span><span>JSON</span><span>UI Design</span>
+            </div>
+            <div class="metric-chips">
+              <span class="metric-chip">Task Coverage: %78</span>
+              <span class="metric-chip">UX Iteration: 4</span>
+              <span class="metric-chip">Roadmap: Q2</span>
+            </div>
+            <div class="progress">
+              <div class="progress-bar" data-progress="65"></div>
+            </div>
+          </article>
+        </div>
+        <p id="projectEmptyState" class="empty-state hidden-card">
+          Aramana uygun proje bulunamadi. Farkli bir kelime dene.
+        </p>
+      </section>
+
+      <section class="reveal">
+        <h3>Proje Takip Tablosu</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Proje Adi</th>
+                <th>Kategori</th>
+                <th>Durum</th>
+                <th>Tamamlanma</th>
+              </tr>
+            </thead>
+            <tbody id="projectsTableBody">
+              <tr><td>Kisisel Blog Sitesi</td><td>Web</td><td>Aktif</td><td>%85</td></tr>
+              <tr><td>BIST100 Finansal Analiz</td><td>Veri</td><td>Tamamlandi</td><td>%100</td></tr>
+              <tr><td>Ders Planlayici Arac</td><td>Otomasyon</td><td>Gelistiriliyor</td><td>%65</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Istatistik Guncem | Projeler Sayfasi</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

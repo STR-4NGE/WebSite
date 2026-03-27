@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Istatistik Guncem | Ana Sayfa</title>
+    <meta
+      name="description"
+      content="Istatistik Guncem blogunda analiz, notlar ve guncel yazilari takip edin. Kisisel projeler ve veri odakli icerikler tek yerde."
+    />
+    <meta property="og:title" content="Istatistik Guncem | Ana Sayfa" />
+    <meta
+      property="og:description"
+      content="Analiz, notlar ve guncel yazilarla kisisel blog ve proje vitrini."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Nunito:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Istatistik Guncem",
+        "inLanguage": "tr",
+        "url": "/"
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#mainContent">Icerige gec</a>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Ana gezinme">
+        <h1 class="logo">Istatistik Guncem</h1>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Ana Sayfa</a></li>
+          <li><a href="about.html">Hakkimda</a></li>
+          <li><a href="projects.html">Projeler</a></li>
+          <li><a href="user-auth.html">Giris</a></li>
+          <li><a href="login.html">Panel</a></li>
+        </ul>
+        <button id="themeToggle" class="theme-toggle" type="button">Karanlik Mod</button>
+      </nav>
+    </header>
+
+    <main id="mainContent" class="container minimalist-layout">
+      <section class="minimalist-intro reveal">
+        <p class="badge">Istatistik Guncem</p>
+        <h2>yasiyor, gozlemliyor, yaziyor</h2>
+        <p class="terminal-meta">&gt; mode: computer-analytics | stream: active | locale: tr-TR</p>
+        <p id="indexIntroText">
+          Bu alan senin blog yazilarin icin hazir bir vitrin. Basliklari, metinleri ve
+          kategorileri istedigin gibi doldurabilirsin.
+        </p>
+      </section>
+
+      <section class="featured-post reveal" aria-labelledby="featuredPostHeading">
+        <h3 id="featuredPostHeading">One Cikan Yazi</h3>
+        <article class="post-card" id="featuredPostCard">
+          <p class="post-tag" id="featuredPostCategory">Kategori</p>
+          <h4 id="featuredPostTitle">Yazi yukleniyor...</h4>
+          <p class="minimalist-meta" id="featuredPostMeta"></p>
+          <p id="featuredPostExcerpt"></p>
+          <a id="featuredPostLink" class="btn" href="post.html?id=" aria-disabled="true">Yaziya git</a>
+        </article>
+      </section>
+
+      <section class="minimalist-posts reveal">
+        <h3>Guncel Yazilar</h3>
+        <article class="minimalist-post-item template-post">
+          <p class="minimalist-meta">Kategori: Analiz • Tarih: [Tarih]</p>
+          <h4>[Yazi Basligi 1]</h4>
+          <p>[Yazi ozetini buraya ekleyebilirsin.]</p>
+          <a href="#" aria-disabled="true">Yaziya git</a>
+        </article>
+        <article class="minimalist-post-item template-post">
+          <p class="minimalist-meta">Kategori: Hayata Dair • Tarih: [Tarih]</p>
+          <h4>[Yazi Basligi 2]</h4>
+          <p>[Ikinci yazinin kisa aciklamasi burada yer alabilir.]</p>
+          <a href="#" aria-disabled="true">Yaziya git</a>
+        </article>
+        <article class="minimalist-post-item template-post">
+          <p class="minimalist-meta">Kategori: Notlar • Tarih: [Tarih]</p>
+          <h4>[Yazi Basligi 3]</h4>
+          <p>[Bu bolumde kendi cumlelerinle giris metni kullanabilirsin.]</p>
+          <a href="#" aria-disabled="true">Yaziya git</a>
+        </article>
+        <div id="publicPosts" class="minimalist-dynamic-posts"></div>
+      </section>
+
+      <aside class="minimalist-sidebar reveal">
+        <h3>Hakkimda</h3>
+        <p id="indexSidebarAboutText">
+          [Kendini tanitan 2-3 cumlelik bir metin]
+        </p>
+        <hr />
+        <h3>Kategoriler</h3>
+        <ul class="minimalist-list">
+          <li>Analiz</li>
+          <li>Hayata Dair</li>
+          <li>Notlar</li>
+        </ul>
+        <hr />
+        <h3>Mail Bulteni</h3>
+        <p id="indexNewsletterText">[Mail bulteni metnini ekleyebilirsin]</p>
+      </aside>
+
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Istatistik Guncem | Tum haklari saklidir.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

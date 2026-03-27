@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Istatistik Guncem | Hakkimda</title>
+    <meta
+      name="description"
+      content="Istatistik Guncem yazari hakkinda bilgiler, yetkinlikler, hedefler ve iletisim formu."
+    />
+    <meta property="og:title" content="Istatistik Guncem | Hakkimda" />
+    <meta
+      property="og:description"
+      content="Yetkinlikler, hedefler ve gelisim yolculugumu bu sayfada inceleyin."
+    />
+    <meta property="og:type" content="profile" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Nunito:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#mainContent">Icerige gec</a>
+    <header class="site-header">
+      <nav class="nav container" aria-label="Ana gezinme">
+        <h1 class="logo">Istatistik Guncem</h1>
+        <ul class="nav-links">
+          <li><a href="index.html">Ana Sayfa</a></li>
+          <li><a href="about.html" class="active">Hakkimda</a></li>
+          <li><a href="projects.html">Projeler</a></li>
+          <li><a href="user-auth.html">Giris</a></li>
+          <li><a href="login.html">Panel</a></li>
+        </ul>
+        <button id="themeToggle" class="theme-toggle" type="button">Karanlik Mod</button>
+      </nav>
+    </header>
+
+    <main id="mainContent" class="container">
+      <section class="about-card reveal">
+        <h2 id="aboutProfileTitle">Merhaba, ben [Adin Soyadin]</h2>
+        <p class="terminal-meta">&gt; profile.load() | role: student-analyst | status: learning-fast</p>
+        <p id="aboutProfileText">
+          Bilgisayar programciligi ogrencisiyim. Web tasarimi, veri analizi ve
+          yeni teknolojileri ogrenmek ilgi alanlarim arasinda. Bu sayfada beni
+          daha yakindan taniyabilirsin.
+        </p>
+        <div class="hero-chips">
+          <span class="chip">Problem Cozme</span>
+          <span class="chip">Takim Calismasi</span>
+          <span class="chip">Surekli Ogrenme</span>
+        </div>
+      </section>
+
+      <section class="reveal">
+        <h3>4) Yetkinlik Tablosu</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Alan</th>
+                <th>Seviye</th>
+                <th>Aciklama</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>HTML/CSS</td><td>Orta</td><td>Responsive tasarim</td></tr>
+              <tr><td>JavaScript</td><td>Orta</td><td>DOM ve temel etkileşim</td></tr>
+              <tr><td>Python</td><td>Iyi</td><td>Veri analizi projeleri</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="reveal">
+        <h3>5) Kisa ve Uzun Vadeli Hedeflerim</h3>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Hedef</th>
+                <th>Sure</th>
+                <th>Durum</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Portfolyo sitesi acmak</td><td>3 ay</td><td>Devam Ediyor</td></tr>
+              <tr><td>Staj bulmak</td><td>6 ay</td><td>Planlandi</td></tr>
+              <tr><td>Freelance proje almak</td><td>12 ay</td><td>Planlandi</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="stats reveal">
+        <div class="stat-box">
+          <span class="count" data-target="12">0</span>
+          <p>Yazilan Blog</p>
+          <div class="mini-sparkline" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="stat-box">
+          <span class="count" data-target="5">0</span>
+          <p>Tamamlanan Proje</p>
+          <div class="mini-sparkline" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="stat-box">
+          <span class="count" data-target="3">0</span>
+          <p>Devam Eden Egitim</p>
+          <div class="mini-sparkline" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+      </section>
+
+      <section class="reveal">
+        <h3>Gelisim Yolculugum</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h4>2024 - Yazilim Temelleri</h4>
+            <p>Programlama mantigi, algoritma ve temel web derslerini tamamladim.</p>
+          </div>
+          <div class="timeline-item">
+            <h4>2025 - Proje Uretimi</h4>
+            <p>Kucuk capli okul projeleri ve bireysel calismalar ile deneyim kazandim.</p>
+          </div>
+          <div class="timeline-item">
+            <h4>2026 - Portfolyo Donemi</h4>
+            <p>Kisisel blog ve portfolyo sayfalarimi gelistirerek yayina almaya basladim.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="reveal">
+        <h3>Iletisim Formu</h3>
+        <form class="contact-form" id="contactForm">
+          <label for="adSoyad">Ad Soyad</label>
+          <input id="adSoyad" name="adSoyad" type="text" required />
+
+          <label for="email">E-posta</label>
+          <input id="email" name="email" type="email" required />
+
+          <label for="mesaj">Mesaj</label>
+          <textarea id="mesaj" name="mesaj" rows="5" required></textarea>
+
+          <button class="btn" type="submit">Mesaji Gonder</button>
+          <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Istatistik Guncem | Iletisim: example@mail.com</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
